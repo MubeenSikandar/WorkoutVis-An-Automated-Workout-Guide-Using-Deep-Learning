@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkoutVis: An Automated Workout Guide Using Deep Learning</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+
+</head>
+{% block content %}
+<body class = "container">
+    <div class="row">
+        <div class="nav_bar">
+            <ul>
+                <li><a class="app-title">WorkoutVis</a></li>
+                <li style="float:right"><a class="buttons" target="_blank" href="https://github.com/MubeenSikandar">GitHub</a></li>
+                <li style="float:right"><a class="buttons" target="_blank" href="https://www.linkedin.com/in/muhammad-mubeen-sikandar-647170216/">LinkedIn</a></li>
+              </ul>
+              <div class="column_center">
+                {% with messages = get_flashed_messages() %}
+                {% if message %}
+                <div class="notification is-danger">
+                    {{messages[0]}} Go to <a href="{{url_for('login')}}"></a>Login Page
+                </div>
+                {% endif %}
+                {% endwith %}
+                <form class="form" action="/register" method="POST">
+                    <h1>Sign Up</h1>
+                    <h3>Email</h3>
+                    <input type="email" class="form-control" name="email">
+                    <h3>Password</h3>
+                    <input type="password" class="form-control" name="password">
+                    <h3>Username</h3>
+                    <input type="text" class="form-control" name="name"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div class="Route">
+                <p>Already a Member? <a href="/login"> Login Here</a></p>
+            </div>
+                
+              </div> 
+        </div>
+      </div>
+</body>
+</html>
+
+{% endblock %}

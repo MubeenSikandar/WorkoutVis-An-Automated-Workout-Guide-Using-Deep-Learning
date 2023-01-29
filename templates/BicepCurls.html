@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkoutVis: An Automated Workout Guide Using Deep Learning</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+
+</head>
+<body class = "container">
+    <div class="row">
+        <div class="nav_bar">
+            <ul>
+                <li><a class="app-title">WorkoutVis</a></li>
+                <li><a class="buttons" href="{{url_for('metrics')}}">Metrics</a></li>
+                <li style="float:right"><a class="buttons" target="_blank" href="https://github.com/MubeenSikandar">GitHub</a></li>
+                <li style="float:right"><a class="buttons" target="_blank" href="https://www.linkedin.com/in/muhammad-mubeen-sikandar-647170216/">LinkedIn</a></li>
+              </ul> 
+        </div>
+        <div class="column_center">
+            <img src="{{ url_for('deadlift_feed') }}">
+        </div>
+        <div class="column_right">
+            <h2>Movements</h2>
+            <div class="content">
+                <img src="/static/images/pexels-victor-freitas-2261477-2.jpg" width="230px">
+                <br>
+                <br>
+                <a href="{{url_for('indexsq')}}">
+                    <img class="bt1" src="/static/images/Squat-Form.jpg" width="230px">
+                   </a>
+                <br>
+                <br>
+                <a href="{{url_for('indexsq')}}">
+                    <img class="bt1" src="/static/images/BC.jpeg" width="230px">
+                    <br>
+                  <br>
+                  <a href="{{url_for('indexsq')}}">
+                    <img class="bt1" src="/static/images/images.jpeg" width="230px">
+                    <br>
+                    <br>
+                    <a href="{{url_for('indexsq')}}">
+                      <img class="bt1" src="/static/images/Plank.jpeg" width="230px">
+                      <br>
+                    <br>
+                    <a href="{{url_for('indexsq')}}">
+                      <img class="bt1" src="/static/images/how-and-why-to-do-push-ups-tablet-960x540.jpg" width="230px">
+                      <br>
+                      <br>
+                      <a href="{{url_for('indexsq')}}">
+                        <img class="bt1" src="/static/images/6-tips-for-improving-your-overhead-press-header-v2-960x540.jpg" width="230px">
+            </div>
+        </div>
+      </div>
+</body>
+</html>
+
